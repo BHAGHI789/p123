@@ -12,11 +12,6 @@ def Student_get(request):
     stud=Student.objects.all()
     serializer=StudentSerializer(stud,many=True)
     return Response(serializer.data)
-@api_view(["GET"])
-def student_get_1(request,pk):
-    stud=Student.objects.get(id=pk)
-    serializer=StudentSerializer(stud)
-    return Response(serializer.data)
 
 
 @api_view(["POST"])
