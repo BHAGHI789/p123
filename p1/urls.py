@@ -21,6 +21,5 @@ urlpatterns = [
     path("",Student_get,name="student_get"),
     path("get/<int:pk>/", student_get_1,name="student_get_1"),
     path("add",student_post),
-    path("up/<int:pk>/",student_patch),
     path("del/<int:pk>/",student_delete)
 ]
